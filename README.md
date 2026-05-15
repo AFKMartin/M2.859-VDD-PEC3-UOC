@@ -1,4 +1,4 @@
-# Proyecto PEC3 – M2.859 · Visualización de Datos · UOC
+# Proyecto PEC3 – M2.859 - Visualización de Datos - UOC
 
 Este repositorio contiene el proyecto desarrollado para la PEC3 de la asignatura **M2.859 – Visualización y Diseño de Datos**.
 
