@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storyboard - ¿Reservar o Cancelar? | PEC 3</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="index.html" style="
+  position: fixed; bottom: 2rem; right: 2rem;
+  background: var(--azul); color: white;
+  padding: .6rem 1.2rem; border-radius: 8px;
+  text-decoration: none; font-size: 13px; font-weight: 600;
+  box-shadow: 0 4px 12px black;
+  ">Visualización de datos</a>
+
+<!-- Carátula -->
+<div class="cover">
+  <div class="cover-meta">PEC 3 - Narrativa de Datos - Storyboard</div>
+  <h1>¿<em>Reservar</em><br>o Cancelar?</h1>
+  <p class="cover-sub">Guión gráfico y documento de diseño de la visualización storytelling sobre el turismo hotelero en Portugal 2015–2017.</p>
+  <div class="cover-tags">
+    <span class="tag">119 390 reservas</span>
+    <span class="tag">2 hoteles - Portugal</span>
+    <span class="tag">HTML + Chart.js</span>
+    <span class="tag">Pirámide de Freytag</span>
+    <span class="tag">Scrollytelling</span>
+  </div>
+  <div class="cover-footer">
+    <span>Javier Martín Acevedo - UOC - 2025</span>
+  </div>
+</div>
+
+<!-- Parte 1: Objetivo y usuario -->
+<div class="page">
+  <div class="section-num">01 - Contextualización</div>
+  <h2>Objetivo y usuario objetivo</h2>
+  <p class="lead">Antes de diseñar cualquier visualización es necesario definir con precisión qué se quiere comunicar y a quién. Estas decisiones condicionan cada elección posterior: los gráficos, los colores, el tono y la estructura narrativa.</p>
+
+  <div class="msg-box">
+    <div class="mb-label">Mensaje central</div>
+    <blockquote>"El mayor reto del sector hotelero no es <em>atraer reservas</em>, sino <em>convertirlas en estancias reales</em>. El precio de la incertidumbre se paga cada noche vacía."</blockquote>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-box accent-azul">
+      <div class="ib-label">Objetivo principal</div>
+      <div class="ib-value">Revelar la paradoja del turismo hotelero en Portugal: alta demanda internacional combinada con una tasa de cancelación del <strong>37 %</strong>, que supone millones en ingresos perdidos.</div>
+    </div>
+    <div class="info-box accent-terra">
+      <div class="ib-label">Problema que resuelve</div>
+      <div class="ib-value">Los directivos hoteleros necesitan entender <em>quién</em> cancela, <em>cuándo</em> y <em>por qué</em>, para tomar decisiones de revenue management basadas en datos.</div>
+    </div>
+    <div class="info-box accent-gold">
+      <div class="ib-label">Datos utilizados</div>
+      <div class="ib-value">Hotel Booking Demand Dataset (Antonio et al., 2019). 119 390 reservas, 2 hoteles en Portugal, julio 2015 – agosto 2017. 32 variables por reserva.</div>
+    </div>
+    <div class="info-box accent-teal">
+      <div class="ib-label">Hallazgo clave (analítica visual)</div>
+      <div class="ib-value">El 37 % de las reservas se cancela. El hotel urbano de Lisboa cancela al 42,2 %, el resort del Algarve al 28,1 %. Los turistas portugueses tienen la mayor tasa (~55 %).</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2.5rem;">Audiencia objetivo</h2>
+  <div class="audience-grid">
+    <div class="aud-card">
+      <div class="aud-icon">👔</div>
+      <div class="aud-role">Director/a de Hotel</div>
+      <div class="aud-desc">Necesita entender qué segmentos de clientes son más rentables y fiables para orientar la estrategia comercial.</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">📊</div>
+      <div class="aud-role">Revenue Manager</div>
+      <div class="aud-desc">Utiliza datos de cancelación y lead time para ajustar precios, políticas de depósito y disponibilidad.</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">📣</div>
+      <div class="aud-role">Responsable de Marketing</div>
+      <div class="aud-desc">Quiere saber de qué países captar más clientes y qué canales de reserva generan menos cancelaciones.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Parte 2: Estructura narrativa -->
+<div class="page">
+  <div class="section-num">02 - Estructura narrativa</div>
+  <h2>Pirámide de Freytag aplicada</h2>
+  <p class="lead">La historia sigue la estructura clásica de la Pirámide de Freytag, adaptada a la narrativa de datos. Cada sección de la visualización corresponde a un momento dramático de la historia.</p>
+
+  <div class="pyramid-wrap">
+    <div class="pyramid-steps">
+      <div class="pstep">
+        <span class="ps-num">1</span>
+        <span class="ps-label">Introducción</span>
+        <span class="ps-desc">Contexto: Portugal como destino, los dos hoteles, las cifras globales</span>
+      </div>
+      <div class="pstep">
+        <span class="ps-num">2</span>
+        <span class="ps-label">Acción ascendente</span>
+        <span class="ps-desc">¿Quiénes son los turistas? ¿De dónde vienen? ¿Cuándo viajan y cuánto pagan?</span>
+      </div>
+      <div class="pstep">
+        <span class="ps-num">3</span>
+        <span class="ps-label">Clímax</span>
+        <span class="ps-desc">REVELACIÓN: el 37 % de las reservas nunca ocurre. La crisis silenciosa</span>
+      </div>
+      <div class="pstep">
+        <span class="ps-num">4</span>
+        <span class="ps-label">Acción descendente</span>
+        <span class="ps-desc">¿Quién cancela más? ¿Cuándo? Patrones y predictores de cancelación</span>
+      </div>
+      <div class="pstep">
+        <span class="ps-num">5</span>
+        <span class="ps-label">Resolución</span>
+        <span class="ps-desc">hallazgos accionables para reducir cancelaciones y mejorar el revenue</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem; padding:1.25rem; background:var(--gold-light); border-radius:10px; border-left:3px solid var(--gold); font-size:13px;">
+    <strong>Tensión narrativa:</strong> Las primeras secciones presentan datos positivos (Portugal como destino internacional de éxito, demanda creciente, diversidad de mercados). Esto genera expectativas optimistas que el clímax rompe de forma dramática con la revelación del 37 % de cancelaciones. El cambio de fondo blanco a negro en esa sección refuerza visualmente el giro narrativo.
+  </div>
+</div>
+
+<!-- Parte 3: Guión Gráfico -->
+<div class="page">
+  <div class="section-num">03 - Guión gráfico (Storyboard)</div>
+  <h2>Flujo de escenas y contenido</h2>
+  <p class="lead">Cada escena corresponde a una sección de la visualización final. Se detalla el contenido, los gráficos empleados y los elementos interactivos.</p>
+
+  <div class="scenes">
+
+    <!-- Hero -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 00</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#1a1208"/>
+            <text x="75" y="28" text-anchor="middle" fill="rgba(250,248,243,0.3)" font-size="7" font-family="serif">¿RESERVAR O CANCELAR?</text>
+            <rect x="20" y="38" width="22" height="18" rx="3" fill="rgba(196,137,42,0.3)" stroke="rgba(196,137,42,0.5)" stroke-width="1"/>
+            <rect x="46" y="38" width="22" height="18" rx="3" fill="rgba(196,137,42,0.3)" stroke="rgba(196,137,42,0.5)" stroke-width="1"/>
+            <rect x="72" y="38" width="22" height="18" rx="3" fill="rgba(196,137,42,0.3)" stroke="rgba(196,137,42,0.5)" stroke-width="1"/>
+            <rect x="98" y="38" width="22" height="18" rx="3" fill="rgba(196,137,42,0.3)" stroke="rgba(196,137,42,0.5)" stroke-width="1"/>
+            <text x="75" y="75" text-anchor="middle" fill="rgba(250,248,243,0.15)" font-size="6">↓ scroll</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Hero Section</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Introducción - Momento 1</div>
+        <div class="scene-title">Portada y contexto global</div>
+        <p>Fondo negro con título en serif dorado. El usuario ve de inmediato las cinco métricas clave del dataset: 119K reservas, 2 hoteles, 178 países de origen, 37 % de cancelación y €101 ADR medio.</p>
+        <p>La hint de scroll guía al usuario hacia abajo. El diseño oscuro crea impacto inicial y contrasta con las secciones informativas posteriores.</p>
+        <div class="scene-charts">
+          <span class="chart-pill">KPI cards (plain text)</span>
+          <span class="interaction-pill">✦ Animación fadeUp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Los hoteles -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 01</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#faf8f3"/>
+            <rect x="8" y="15" width="63" height="70" rx="5" fill="#d4e4f7" stroke="rgba(27,79,138,0.3)" stroke-width="1"/>
+            <rect x="79" y="15" width="63" height="70" rx="5" fill="#d0ede7" stroke="rgba(13,110,90,0.3)" stroke-width="1"/>
+            <text x="39" y="30" text-anchor="middle" fill="#1b4f8a" font-size="6" font-weight="bold">🏙 Lisboa</text>
+            <text x="110" y="30" text-anchor="middle" fill="#0d6e5a" font-size="6" font-weight="bold">🏖 Algarve</text>
+            <line x1="15" y1="40" x2="64" y2="40" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+            <line x1="15" y1="50" x2="64" y2="50" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+            <line x1="15" y1="60" x2="64" y2="60" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+            <line x1="86" y1="40" x2="135" y2="40" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+            <line x1="86" y1="50" x2="135" y2="50" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+            <line x1="86" y1="60" x2="135" y2="60" stroke="rgba(26,18,8,0.1)" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Tarjetas comparativas</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Acción ascendente - Momento 2</div>
+        <div class="scene-title">Los dos hoteles</div>
+        <p>Dos tarjetas en paralelo (azul para Lisboa, verde para el Algarve) con las estadísticas clave de cada establecimiento: reservas, ADR medio, tasa de cancelación y segmento líder.</p>
+        <p>El diseño en grid 1:1 invita a la comparación directa. La codificación de color se mantiene consistente en toda la visualización.</p>
+        <div class="scene-charts">
+          <span class="chart-pill">Tarjetas (plain text)</span>
+          <span class="chart-pill">Grid comparativo</span>
+          <span class="interaction-pill">✦ Reveal on scroll</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Huéspedes -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 02</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#faf8f3"/>
+            <rect x="8" y="70" width="12" height="22" fill="#1b4f8a"/>
+            <rect x="10" y="72" width="8" height="12" fill="#0d6e5a"/>
+            <rect x="24" y="55" width="12" height="37" fill="#1b4f8a"/>
+            <rect x="26" y="57" width="8" height="20" fill="#0d6e5a"/>
+            <rect x="40" y="62" width="12" height="30" fill="#1b4f8a"/>
+            <rect x="56" y="65" width="12" height="27" fill="#1b4f8a"/>
+            <rect x="72" y="68" width="12" height="24" fill="#1b4f8a"/>
+            <rect x="88" y="72" width="12" height="20" fill="#1b4f8a"/>
+            <rect x="104" y="74" width="12" height="18" fill="#1b4f8a"/>
+            <rect x="120" y="76" width="12" height="16" fill="#1b4f8a"/>
+            <line x1="8" y1="92" x2="140" y2="92" stroke="#ccc" stroke-width="0.5"/>
+            <text x="75" y="12" text-anchor="middle" fill="#6b5c40" font-size="6">Top países de origen</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Barras agrupadas</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Acción ascendente - Momento 2</div>
+        <div class="scene-title">De dónde vienen los turistas</div>
+        <p>Gráfico de barras agrupadas con los 10 países con más reservas. Cada país muestra la distribución entre hotel urbano (azul) y resort (verde), revelando preferencias geográficas claras.</p>
+        <p>Debajo, cuatro tarjetas de segmento muestran la distribución por canal de reserva (Online TA 47,3 %, Offline TA/TO 20,3 %, Grupos 16,6 %, Directo 10,6 %).</p>
+        <div class="scene-charts">
+          <span class="chart-pill">Barras agrupadas</span>
+          <span class="chart-pill">Tarjetas de segmento</span>
+          <span class="interaction-pill">✦ Tooltips interactivos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estacionalidad -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 03</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#faf8f3"/>
+            <!-- Meses -->
+            <rect x="8" y="75" width="9" height="12" fill="#1b4f8a"/>
+            <rect x="19" y="68" width="9" height="19" fill="#1b4f8a"/>
+            <rect x="30" y="62" width="9" height="25" fill="#c4892a"/>
+            <rect x="41" y="56" width="9" height="31" fill="#c4892a"/>
+            <rect x="52" y="53" width="9" height="34" fill="#b5441a"/>
+            <rect x="63" y="57" width="9" height="30" fill="#c4892a"/>
+            <rect x="74" y="48" width="9" height="39" fill="#b5441a"/>
+            <rect x="85" y="45" width="9" height="42" fill="#b5441a"/>
+            <rect x="96" y="60" width="9" height="27" fill="#c4892a"/>
+            <rect x="107" y="56" width="9" height="31" fill="#b5441a"/>
+            <rect x="118" y="70" width="9" height="17" fill="#1b4f8a"/>
+            <rect x="129" y="67" width="9" height="20" fill="#1b4f8a"/>
+            <line x1="8" y1="87" x2="140" y2="87" stroke="#ccc" stroke-width="0.5"/>
+            <!-- Adr -->
+            <polyline points="12,30 23,28 34,25 45,21 56,18 67,16 78,14 89,12 100,19 111,21 122,26 133,28" stroke="#1b4f8a" stroke-width="1.5" fill="none"/>
+            <polyline points="12,40 23,36 34,28 45,20 56,15 67,10 78,8 89,7 100,16 111,25 122,38 133,42" stroke="#0d6e5a" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+            <text x="75" y="9" text-anchor="middle" fill="#6b5c40" font-size="5">ADR mensual</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Barras + Líneas</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Acción ascendente - Momento 2</div>
+        <div class="scene-title">¿Cuándo viajan los turistas?</div>
+        <p>Gráfico de barras mensual con codificación cromática semántica: alta temporada en terracota, media en dorado, baja en azul. Revela el pico de agosto (13 877 reservas).</p>
+        <p>Gráfico de líneas dobles mostrando la evolución del ADR por mes para cada hotel. El resort del Algarve muestra una variación estacional extrema (€50 en enero vs €150 en agosto).</p>
+        <div class="scene-charts">
+          <span class="chart-pill">Barras simples (color semántico)</span>
+          <span class="chart-pill">Líneas dobles</span>
+          <span class="interaction-pill">✦ Tooltips interactivos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- cLÍMAX -->
+    <div class="scene">
+      <div class="scene-frame" style="background:#b5441a;">
+        <div class="scene-num" style="color:rgba(250,248,243,0.4);">ESCENA 04 - CLÍMAX</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#1a1208"/>
+            <text x="75" y="45" text-anchor="middle" fill="#c4892a" font-size="28" font-family="serif" font-weight="bold">37%</text>
+            <text x="75" y="58" text-anchor="middle" fill="rgba(250,248,243,0.4)" font-size="6">de reservas canceladas</text>
+            <rect x="15" y="68" width="50" height="22" rx="3" fill="rgba(181,68,26,0.3)" stroke="rgba(181,68,26,0.5)" stroke-width="1"/>
+            <rect x="85" y="68" width="50" height="22" rx="3" fill="rgba(13,110,90,0.3)" stroke="rgba(13,110,90,0.5)" stroke-width="1"/>
+            <text x="40" y="82" text-anchor="middle" fill="rgba(250,248,243,0.6)" font-size="8">42.2%</text>
+            <text x="110" y="82" text-anchor="middle" fill="rgba(250,248,243,0.6)" font-size="8">28.1%</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis" style="background:rgba(196,137,42,0.2); color:var(--gold);">Fondo oscuro - Giro narrativo</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">CLÍMAX - Momento 3 - El giro dramático</div>
+        <div class="scene-title">1 de cada 3 reservas nunca ocurre</div>
+        <p><strong>Decisión de diseño clave:</strong> el fondo cambia a negro en esta sección para marcar visualmente el cambio de tono. Es el único momento de fondo oscuro en el cuerpo de la visualización.</p>
+        <p>El contador animado del "37 %" se activa al hacer scroll hasta esta sección, creando anticipación. Dos tarjetas muestran el contraste entre ambos hoteles. Gráfico horizontal de cancelación por país (codificación rojo/naranja/verde según gravedad).</p>
+        <div class="scene-charts">
+          <span class="chart-pill">KPI grande animado</span>
+          <span class="chart-pill">Barras horizontales (por país)</span>
+          <span class="chart-pill">Barras horizontales (lead time)</span>
+          <span class="interaction-pill">✦ Contador animado</span>
+          <span class="interaction-pill">✦ IntersectionObserver</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tipo de estancia -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 05</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#faf8f3"/>
+            <!-- Doughnut 1 -->
+            <circle cx="45" cy="50" r="28" fill="none" stroke="#e0dbd0" stroke-width="14"/>
+            <circle cx="45" cy="50" r="28" fill="none" stroke="#1b4f8a" stroke-width="14" stroke-dasharray="85 176" stroke-dashoffset="0"/>
+            <circle cx="45" cy="50" r="28" fill="none" stroke="#0d6e5a" stroke-width="14" stroke-dasharray="38 176" stroke-dashoffset="-85"/>
+            <circle cx="45" cy="50" r="28" fill="none" stroke="#c4892a" stroke-width="14" stroke-dasharray="32 176" stroke-dashoffset="-123"/>
+            <!-- Doughnut 2 -->
+            <circle cx="110" cy="50" r="28" fill="none" stroke="#e0dbd0" stroke-width="14"/>
+            <circle cx="110" cy="50" r="28" fill="none" stroke="#1b4f8a" stroke-width="14" stroke-dasharray="136 176" stroke-dashoffset="0"/>
+            <circle cx="110" cy="50" r="28" fill="none" stroke="#0d6e5a" stroke-width="14" stroke-dasharray="21 176" stroke-dashoffset="-136"/>
+            <text x="45" y="10" text-anchor="middle" fill="#6b5c40" font-size="5">Tipo estancia</text>
+            <text x="110" y="10" text-anchor="middle" fill="#6b5c40" font-size="5">Régimen</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Doughnut charts</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Acción descendente - Momento 4</div>
+        <div class="scene-title">¿Con qué propósito viajan?</div>
+        <p>Dos doughnut charts en paralelo: distribución por tipo de estancia inferido (trabajo+descanso 47%, trabajo 43 %, fin de semana 6 %…) y por régimen alimenticio (BB 78 %, HB 12 %…).</p>
+        <p>El doughnut se elige sobre el pie chart por su legibilidad superior cuando hay entre 3 y 6 categorías, y porque el espacio central permite añadir un valor de referencia si se desea.</p>
+        <div class="scene-charts">
+          <span class="chart-pill">Doughnut × 2</span>
+          <span class="interaction-pill">✦ Hover highlight</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusiones -->
+    <div class="scene">
+      <div class="scene-frame">
+        <div class="scene-num">ESCENA 06</div>
+        <div class="scene-preview">
+          <svg class="wf" viewBox="0 0 150 100" fill="none">
+            <rect width="150" height="100" fill="#faf8f3"/>
+            <rect x="8" y="15" width="134" height="14" rx="3" fill="#d4e4f7" stroke="rgba(27,79,138,0.3)" stroke-width="1"/>
+            <rect x="8" y="33" width="134" height="14" rx="3" fill="#d4e4f7" stroke="rgba(27,79,138,0.3)" stroke-width="1"/>
+            <rect x="8" y="51" width="134" height="14" rx="3" fill="#d4e4f7" stroke="rgba(27,79,138,0.3)" stroke-width="1"/>
+            <rect x="8" y="69" width="134" height="14" rx="3" fill="#d4e4f7" stroke="rgba(27,79,138,0.3)" stroke-width="1"/>
+            <rect x="8" y="15" width="3" height="14" rx="1" fill="#1b4f8a"/>
+            <rect x="8" y="33" width="3" height="14" rx="1" fill="#1b4f8a"/>
+            <rect x="8" y="51" width="3" height="14" rx="1" fill="#1b4f8a"/>
+            <rect x="8" y="69" width="3" height="14" rx="1" fill="#1b4f8a"/>
+            <text x="75" y="10" text-anchor="middle" fill="#6b5c40" font-size="5">5 hallazgos accionables</text>
+          </svg>
+        </div>
+        <span class="scene-tag-vis">Lista de findings</span>
+      </div>
+      <div class="scene-body">
+        <div class="scene-section">Resolución - Momento 5</div>
+        <div class="scene-title">Qué nos enseñan los datos</div>
+        <p>Cinco hallazgos presentados como tarjetas con borde izquierdo azul, organizados de mayor a menor impacto accionable: dependencia de OTAs, coste de cancelaciones, volatilidad del mercado doméstico, antelación como predictor, y perfiles diferenciados.</p>
+        <p>El formato de lista estructurada convierte los insights en acciones concretas para el decisor, cerrando el ciclo narrativo con una resolución práctica.</p>
+        <div class="scene-charts">
+          <span class="chart-pill">Tarjetas de findings</span>
+          <span class="interaction-pill">✦ Reveal on scroll</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /scenes -->
+</div>
+
+<!-- Parte 4: Diseño visual -->
+<div class="page">
+  <div class="section-num">04 - Diseño visual</div>
+  <h2>Paleta de colores</h2>
+  <p class="lead">Cada color tiene un rol semántico consistente en toda la visualización. El uso es funcional: el color comunica, no decora.</p>
+
+  <div class="swatches">
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(212, 67%, 32%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Azul</div>
+        <div class="sw-hex">#1b4f8a</div>
+        <div class="sw-use">Hotel Urbano - datos informativos</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(168, 79%, 24%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Verde azulado</div>
+        <div class="sw-hex">#0d6e5a</div>
+        <div class="sw-use">Resort - baja cancelación</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(16, 75%, 41%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Terracota</div>
+        <div class="sw-hex">#b5441a</div>
+        <div class="sw-use">Alertas - alta cancelación</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(37, 65%, 47%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Dorado</div>
+        <div class="sw-hex">#c4892a</div>
+        <div class="sw-use">Acentos - datos clave - clímax</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(43, 41%, 97%); border:1px solid hsl(0, 0%, 80%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Crema</div>
+        <div class="sw-hex">#faf8f3</div>
+        <div class="sw-use">Fondo general - cálido, no frío</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="sw-dot" style="background:hsl(33, 53%, 7%);"></div>
+      <div class="sw-info">
+        <div class="sw-name">Tinta</div>
+        <div class="sw-hex">#1a1208</div>
+        <div class="sw-use">Hero + Clímax - dramatismo</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2.5rem;">Tipografía</h2>
+  <div class="type-row">
+    <div class="type-card">
+      <div class="type-sample-serif">Playfair Display</div>
+      <div class="type-meta">Serif - Títulos y números de impacto</div>
+      <div style="margin-top:.75rem; font-size:13px; color:var(--muted);">Aporta autoridad editorial y contraste visual. Usada en todos los títulos de sección, el número "37%" del clímax y los KPI cards del hero.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-sample-sans">Source Sans 3 Light/Regular/SemiBold</div>
+      <div class="type-meta">Sans-serif - Cuerpo de texto y UI</div>
+      <div style="margin-top:.75rem; font-size:13px; color:var(--muted);">Garantiza legibilidad en bloques de texto largos. El contraste serif/sans es un estándar del periodismo de datos de calidad (The Economist, FT).</div>
+    </div>
+    <div class="type-card">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:1.1rem; font-weight:600; margin-bottom:.5rem;">JetBrains Mono</div>
+      <div class="type-meta">Monospace - Etiquetas técnicas y metadatos</div>
+      <div style="margin-top:.75rem; font-size:13px; color:var(--muted);">Usada en los números de sección, códigos de país, hexadecimales de color y tags de navegación. Refuerza la naturaleza analítica del contenido.</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2.5rem;">Justificación de tipos de gráficos</h2>
+  <table class="design-table">
+    <thead>
+      <tr>
+        <th>Gráfico</th>
+        <th>Sección</th>
+        <th>Justificación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cat">KPI cards (plain text)</td>
+        <td>Hero, hoteles</td>
+        <td>Un número único de alto impacto es la visualización más eficiente cuando hay un único dato que comunicar. Sin ruido visual.</td>
+      </tr>
+      <tr>
+        <td class="cat">Barras agrupadas</td>
+        <td>Países de origen</td>
+        <td>Permite comparar dos grupos (city/resort) para múltiples categorías simultáneamente. Más honesto que las barras apiladas para detectar diferencias absolutas.</td>
+      </tr>
+      <tr>
+        <td class="cat">Barras simples (color semántico)</td>
+        <td>Estacionalidad mensual</td>
+        <td>Una sola variable con 12 categorías temporales. El color codifica la intensidad (alta/media/baja temporada) añadiendo una capa de información sin añadir un eje.</td>
+      </tr>
+      <tr>
+        <td class="cat">Líneas dobles</td>
+        <td>ADR mensual</td>
+        <td>Ideal para mostrar tendencias temporales comparativas. La línea discontinua diferencia visualmente los dos grupos sin depender solo del color.</td>
+      </tr>
+      <tr>
+        <td class="cat">Barras horizontales</td>
+        <td>Cancelación por país, lead time</td>
+        <td>Las etiquetas de país son largas - la orientación horizontal las hace legibles. Además, el ranking de izquierda a derecha es intuitivo para comparaciones ordinales.</td>
+      </tr>
+      <tr>
+        <td class="cat">Doughnut charts</td>
+        <td>Tipo estancia, régimen</td>
+        <td>Composición/parte del todo con 4-5 categorías. Preferido al pie chart por su mejor legibilidad. El espacio central permite añadir valor de referencia.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Parte 5: Interactividad -->
+<div class="page">
+  <div class="section-num">05 - Interactividad y accesibilidad</div>
+  <h2>Elementos interactivos</h2>
+  <p class="lead">La interactividad es funcional, no decorativa. Cada elemento interactivo sirve para profundizar en los datos o guiar la atención del usuario en momentos clave de la narrativa.</p>
+
+  <ul class="int-list">
+    <li>
+      <span class="ii">🔢</span>
+      <div><strong>Contador animado del 37 %</strong><br>Se activa mediante IntersectionObserver cuando el usuario llega a la sección de clímax. Crear anticipación e impacto emocional en el dato más importante de la historia.</div>
+    </li>
+    <li>
+      <span class="ii">📜</span>
+      <div><strong>Animaciones de entrada (reveal on scroll)</strong><br>Cada sección aparece con una transición fadeUp suave al entrar en el viewport. Guía la lectura secuencial y evita que el usuario se abrume viendo todo a la vez.</div>
+    </li>
+    <li>
+      <span class="ii">💬</span>
+      <div><strong>Tooltips en todos los gráficos (Chart.js)</strong><br>Al pasar el cursor sobre cualquier barra, línea o segmento, aparece el valor exacto. Permite exploración detallada sin saturar el gráfico con etiquetas.</div>
+    </li>
+    <li>
+      <span class="ii">🗂️</span>
+      <div><strong>Navegación sticky con anclas</strong><br>La barra superior permite saltar directamente a cualquier sección. Facilita la revisión no lineal del contenido para usuarios que ya conocen la historia.</div>
+    </li>
+  </ul>
+
+  <h2 style="margin-top:2.5rem;">Accesibilidad</h2>
+  <div class="info-grid">
+    <div class="info-box">
+      <div class="ib-label">Texto alternativo</div>
+      <div class="ib-value">Todos los <code>&lt;canvas&gt;</code> incluyen <code>role="img"</code> y <code>aria-label</code> descriptivo para lectores de pantalla.</div>
+    </div>
+    <div class="info-box">
+      <div class="ib-label">Contraste de color</div>
+      <div class="ib-value">Todos los textos sobre fondos coloreados superan el ratio de contraste 4.5:1 recomendado por WCAG 2.1.</div>
+    </div>
+    <div class="info-box">
+      <div class="ib-label">No solo color</div>
+      <div class="ib-value">El color nunca es el único canal de información. Siempre va acompañado de etiquetas de texto o formas diferenciadas.</div>
+    </div>
+    <div class="info-box">
+      <div class="ib-label">Líneas diferenciadas</div>
+      <div class="ib-value">En el gráfico de líneas dobles, se usa línea continua vs. discontinua además del color para diferenciar los dos hoteles.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Parte 6: Flujo técnico -->
+<div class="page">
+  <div class="section-num">06 - Herramienta y flujo técnico</div>
+  <h2>Selección de herramienta</h2>
+  <p class="lead">Se optó por una solución personalizada en HTML5 + CSS3 + JavaScript con Chart.js.</p>
+
+  <div class="info-grid">
+    <div class="info-box accent-azul">
+      <div class="ib-label">✅ Ventajas de la solución custom</div>
+      <div class="ib-value">Control total sobre estética y narrativa - Sin límites de elementos - Animaciones personalizadas - Sin dependencia de plataformas externas - Funciona offline</div>
+    </div>
+    <div class="info-box accent-gold">
+      <div class="ib-label">📦 Tecnologías utilizadas</div>
+      <div class="ib-value">HTML5 semántico - CSS3 (variables, grid, flexbox, animations) - JavaScript ES6 - Chart.js - Google Fonts - IntersectionObserver API</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2rem;">Flujo de producción</h2>
+  <div class="flow">
+    <span class="flow-step">1. Analítica visual (R)</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">2. Hallazgos clave</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">3. Storyboard</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">4. Diseño HTML/CSS</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">5. Gráficos Chart.js</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">6. Revisión narrativa</span>
+  </div>
+
+  <div style="margin-top:2rem; padding:1.25rem 1.5rem; background:var(--cream); border-radius:10px; border:1px solid var(--border); font-size:13px;">
+    <strong>Decisión sobre Chart.js vs. D3.js:</strong> Chart.js fue elegido sobre D3 por su curva de aprendizaje menor y su integración directa con HTML estático. D3 habría permitido más personalización pero habría aumentado significativamente el tiempo de desarrollo sin añadir valor narrativo al resultado final. El objetivo es la historia, no la tecnología.
+  </div>
+</div>
+
+</body>
+</html>
