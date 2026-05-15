@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Reservar o Cancelar? – Turismo Hotelero en Portugal 2015–2017</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="storyboard.html" style="
+  position: fixed; bottom: 2rem; right: 2rem;
+  background: var(--azul); color: white;
+  padding: .6rem 1.2rem; border-radius: 8px;
+  text-decoration: none; font-size: 13px; font-weight: 600;
+  box-shadow: 0 4px 12px black;
+  ">Storyboard</a>
+
+<nav>
+  <span class="brand">Turismo Hotelero - Portugal</span>
+  <div class="nav-links">
+    <a href="#contexto">Los Hoteles</a>
+    <a href="#huespedes">Huéspedes</a>
+    <a href="#temporada">Temporada</a>
+    <a href="#crisis">La Crisis</a>
+    <a href="#conclusiones">Conclusiones</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Narrativa de Datos - 119 390 reservas - Portugal</div>
+  <h1>¿<em>Reservar</em> o Cancelar?<br>El dilema del turismo hotelero en Portugal</h1>
+  <p class="hero-sub">Cada año millones de turistas reservan hoteles. Pero, ¿cuántos realmente llegan? Un análisis de dos años de datos reales revela una crisis silenciosa.</p>
+  <div class="hero-kpis">
+    <div class="kpi-card"><span class="num">119K</span><span class="lbl">Reservas totales</span></div>
+    <div class="kpi-card"><span class="num">2</span><span class="lbl">Hoteles en Portugal</span></div>
+    <div class="kpi-card"><span class="num">178</span><span class="lbl">Países de origen</span></div>
+    <div class="kpi-card"><span class="num">37%</span><span class="lbl">Tasa de cancelación</span></div>
+    <div class="kpi-card"><span class="num">€101</span><span class="lbl">ADR medio</span></div>
+  </div>
+  <div class="scroll-hint">
+    <span>Desplázate</span>
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
+</div>
+
+<!-- Parte 1: CONTEXTO -->
+<section id="contexto">
+  <div class="section-tag reveal">01 - Contexto</div>
+  <h2 class="section-title reveal">Dos hoteles, una historia</h2>
+  <p class="section-lead reveal">El dataset contiene 119 390 reservas entre julio de 2015 y agosto de 2017, procedentes de dos establecimientos reales en Portugal: un hotel urbano en Lisboa y un resort en el Algarve.</p>
+
+  <div class="hotel-grid reveal">
+    <div class="hotel-card city-card">
+      <div class="hc-header">
+        <div class="hc-icon">🏙️</div>
+        <div class="hc-name">Hotel Urbano</div>
+        <div class="hc-loc">Lisboa (H2)</div>
+      </div>
+      <div class="hc-body">
+        <div class="hc-stat"><span class="sl">Reservas</span><span class="sv">79 330</span></div>
+        <div class="hc-stat"><span class="sl">ADR medio</span><span class="sv">€ 106,88</span></div>
+        <div class="hc-stat"><span class="sl">Cancelaciones</span><span class="sv">~42,2 %</span></div>
+        <div class="hc-stat"><span class="sl">Segmento líder</span><span class="sv">Online TA</span></div>
+        <div class="hc-stat"><span class="sl">País 1</span><span class="sv">Portugal</span></div>
+      </div>
+    </div>
+    <div class="hotel-card resort-card">
+      <div class="hc-header">
+        <div class="hc-icon">🏖️</div>
+        <div class="hc-name">Resort Vacacional</div>
+        <div class="hc-loc">Algarve (H1)</div>
+      </div>
+      <div class="hc-body">
+        <div class="hc-stat"><span class="sl">Reservas</span><span class="sv">40 060</span></div>
+        <div class="hc-stat"><span class="sl">ADR medio</span><span class="sv">€ 96,77</span></div>
+        <div class="hc-stat"><span class="sl">Cancelaciones</span><span class="sv">~28,1 %</span></div>
+        <div class="hc-stat"><span class="sl">Segmento líder</span><span class="sv">Online TA</span></div>
+        <div class="hc-stat"><span class="sl">País 1</span><span class="sv">Portugal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep" style="margin-top:2.5rem;">
+  <p class="reveal" style="font-size:.95rem; color:var(--text-muted); max-width:680px; margin-top:1.5rem;">
+    El hotel urbano recibe el doble de reservas que el resort, pero también cobra más caro de media y sufre una tasa de cancelación mucho mayor. Esto plantea la primera pregunta de nuestra historia: <strong>¿a quién atraen estos dos hoteles?</strong>
+  </p>
+</section>
+
+<!-- Parte 2: HUÉSPEDES -->
+<section id="huespedes">
+  <div class="section-tag reveal">02 - Los Huéspedes</div>
+  <h2 class="section-title reveal">De dónde vienen los turistas</h2>
+  <p class="section-lead reveal">Con viajeros de 178 países, Portugal es un destino verdaderamente internacional. Pero la distribución está muy concentrada: los 10 primeros países acumulan más del 75 % de todas las reservas.</p>
+
+  <div class="reveal">
+    <div class="chart-title">Top 10 países por número de reservas</div>
+    <div class="chart-sub">Comparativa entre Hotel Urbano (Lisboa) y Resort (Algarve)</div>
+    <div class="chart-wrap" style="height:380px;">
+      <canvas id="countryChart" role="img" aria-label="Gráfico de barras con los 10 países con más reservas, comparando hotel urbano y resort. Portugal es el primero con más de 48000 reservas.">Los 10 países con más reservas son Portugal, Reino Unido, Francia, España, Alemania, Italia, Irlanda, Países Bajos, Brasil y Estados Unidos.</canvas>
+    </div>
+    <div style="margin-top:1rem; padding:1rem; background:var(--azul-light); border-radius:8px; font-size:13px; color:var(--azul);">
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-top:3rem;">
+    <div class="chart-title">Distribución por canal de reserva</div>
+    <div class="chart-sub">Cómo llegaron los clientes a los hoteles</div>
+    <div class="seg-grid">
+      <div class="seg-card">
+        <div class="sc-icon">💻</div>
+        <div class="sc-pct" style="color:var(--azul)">47,3 %</div>
+        <div style="font-weight:600; font-size:14px; margin-top:4px;">Online TA</div>
+        <div class="sc-lbl">Agencias de viaje online (Booking, Expedia…)</div>
+      </div>
+      <div class="seg-card">
+        <div class="sc-icon">🤝</div>
+        <div class="sc-pct" style="color:var(--teal)">20,3 %</div>
+        <div style="font-weight:600; font-size:14px; margin-top:4px;">Offline TA/TO</div>
+        <div class="sc-lbl">Agencias y touroperadores offline</div>
+      </div>
+      <div class="seg-card">
+        <div class="sc-icon">👥</div>
+        <div class="sc-pct" style="color:var(--gold)">16,6 %</div>
+        <div style="font-weight:600; font-size:14px; margin-top:4px;">Grupos</div>
+        <div class="sc-lbl">Reservas de grupos organizados</div>
+      </div>
+      <div class="seg-card">
+        <div class="sc-icon">📞</div>
+        <div class="sc-pct" style="color:var(--terracota)">10,6 %</div>
+        <div style="font-weight:600; font-size:14px; margin-top:4px;">Directo</div>
+        <div class="sc-lbl">Reservas directas al hotel</div>
+      </div>
+    </div>
+    <div style="margin-top:1rem; padding:1rem; background:var(--terracota-light); border-radius:8px; font-size:13px; color:var(--terracota);">
+      <strong>Hallazgo clave:</strong> Casi la mitad de las reservas llegan por agencias online. La reserva directa representa solo el 10,6 %, lo que supone una dependencia alta de intermediarios con comisiones elevadas.
+    </div>
+  </div>
+</section>
+
+<!-- Parte 3: Temporalidad -->
+<section id="temporada">
+  <div class="section-tag reveal">03 - Estacionalidad</div>
+  <h2 class="section-title reveal">¿Cuándo viajan los turistas?</h2>
+  <p class="section-lead reveal">La distribución mensual revela patrones claros de alta y baja temporada, con diferencias importantes entre el hotel urbano (menos estacional) y el resort (muy marcado por el verano).</p>
+
+  <div class="reveal">
+    <div class="chart-wrap" style="height:320px;">
+      <canvas id="monthChart" role="img" aria-label="Gráfico de barras con la distribución mensual de reservas. Agosto y julio son los meses con más reservas.">Distribución mensual de reservas: agosto 13707, julio 12487, mayo 11608, octubre 10928, abril 10952, junio 10817, marzo 9636, septiembre 10349, febrero 7919, noviembre 6635, diciembre 6558, enero 5799.</canvas>
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-top:2.5rem;">
+    <div class="chart-title" style="margin-bottom:1rem;">Precio medio (ADR) por mes - Ciudad vs. Resort</div>
+    <div class="chart-wrap" style="height:280px;">
+      <canvas id="adrChart" role="img" aria-label="Gráfico de líneas con el precio medio por noche según el mes, comparando hotel urbano y resort. El resort tiene mayor variación estacional.">Precios medios mensuales comparados entre hotel urbano y resort. El resort tiene picos más altos en verano.</canvas>
+    </div>
+    <div style="margin-top:1rem; padding:1rem; background:var(--gold-light); border-radius:8px; font-size:13px; color:var(--gold);">
+      <strong>Hallazgo clave:</strong> El resort del Algarve muestra un patrón de precios muy estacional: los precios de verano casi duplican los de invierno. El hotel de Lisboa mantiene precios más estables durante todo el año, beneficiándose del turismo de ciudad independiente de la temporada.
+    </div>
+  </div>
+</section>
+
+<!-- Parte 4: Cancelaciones -->
+<div class="climax-bg" id="crisis">
+  <div class="inner">
+    <div class="section-tag reveal">04 - El Giro de la Historia</div>
+    <h2 class="section-title reveal">1 de cada 3 reservas <em style="color:var(--gold); font-style:italic;">nunca ocurre</em></h2>
+    <p class="section-lead reveal">Hasta aquí hemos visto quiénes reservan y cuándo. Pero hay un dato que lo cambia todo: una proporción asombrosa de esas reservas jamás se materializa.</p>
+
+    <div class="big-stat reveal">
+      <span class="bnum" id="cancelCounter">0%</span>
+      <div class="btxt">de todas las reservas fueron canceladas o resultaron en no-show</div>
+    </div>
+
+    <div class="cancel-grid reveal">
+      <div class="cancel-card">
+        <span class="cc-pct city-pct">42,2 %</span>
+        <div class="cc-lbl">Hotel Urbano - Lisboa<br>32 598 reservas perdidas</div>
+      </div>
+      <div class="cancel-card">
+        <span class="cc-pct resort-pct">28,1 %</span>
+        <div class="cc-lbl">Resort - Algarve<br>11 122 reservas perdidas</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;" class="reveal">
+      <div class="chart-title" style="color:rgba(250,248,243,.75); margin-bottom:1rem;">Tasa de cancelación por país de origen - Top 15 mercados</div>
+      <div class="chart-wrap" style="height:400px;">
+        <canvas id="cancelByCountry" role="img" aria-label="Gráfico de barras horizontales con la tasa de cancelación por país. Portugal tiene la tasa más alta.">Tasas de cancelación por país de origen. Portugal tiene la tasa de cancelación más alta de todos los mercados.</canvas>
+      </div>
+      <div style="margin-top:1rem; padding:1rem; background:rgba(181,68,26,0.2); border-radius:8px; font-size:13px; color:var(--terracota-light); border-left: 3px solid var(--terracota-light);">
+        <strong>Hallazgo sorprendente:</strong> Los turistas portugueses, que son los más numerosos, también tienen la mayor tasa de cancelación (estimada en ~55 %). En contraste, irlandeses y británicos apenas cancelan (~15-18 %), probablemente porque viajan desde más lejos y tienen menos flexibilidad.
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;" class="reveal">
+      <div class="chart-title" style="color:rgba(250,248,243,.75); margin-bottom:1rem;">¿Cuánto tiempo antes se cancela? - Distribución del lead time</div>
+      <div class="chart-wrap" style="height:260px;">
+        <canvas id="leadChart" role="img" aria-label="Gráfico comparativo del lead time entre reservas canceladas y no canceladas.">Lead time promedio: reservas canceladas 137 días, reservas completadas 78 días. Las reservas canceladas se hacen antes.</canvas>
+      </div>
+      <div style="margin-top:1rem; padding:1rem; background:rgba(196,137,42,0.15); border-radius:8px; font-size:13px; color:var(--gold); border-left: 3px solid var(--gold);">
+        <strong>Patrón detectado:</strong> Las reservas que acaban cancelándose se realizan de media 137 días antes de la llegada, frente a los 78 días de las que se completan. A mayor antelación en la reserva, mayor probabilidad de cancelación.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Parte 5: Tipo de estancia -->
+<section>
+  <div class="section-tag reveal">05 - Tipo de Estancia</div>
+  <h2 class="section-title reveal">¿Con qué propósito viajan?</h2>
+  <p class="section-lead reveal">Clasificando las reservas según la combinación de noches de semana y fin de semana, podemos inferir el propósito del viaje: trabajo, ocio, paquetes vacacionales o escapadas de fin de semana.</p>
+
+  <div class="reveal">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+      <div>
+        <div class="chart-title">Distribución por tipo de estancia</div>
+        <div class="chart-sub">Clasificación inferida del propósito del viaje</div>
+        <div class="chart-wrap" style="height:280px;">
+          <canvas id="stayTypeChart" role="img" aria-label="Gráfico circular con los tipos de estancia. El turismo vacacional es el más frecuente.">Tipos de estancia: vacacional 48%, trabajo 22%, trabajo+descanso 18%, fin de semana 8%, paquete semanal 4%.</canvas>
+        </div>
+      </div>
+      <div>
+        <div class="chart-title">Tipo de régimen alimenticio</div>
+        <div class="chart-sub">Qué incluye la reserva</div>
+        <div class="chart-wrap" style="height:280px;">
+          <canvas id="mealChart" role="img" aria-label="Gráfico circular con los regímenes alimenticios. Bed and Breakfast es el más frecuente con 77%.">Regímenes: Bed and Breakfast 77%, Half Board 12%, Solo alojamiento 9%, Full Board menos del 1%.</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <blockquote class="reveal">
+    "El mayor reto del sector hotelero no es <span>atraer reservas</span>, sino <span>convertirlas en estancias reales</span>. El precio de la incertidumbre se paga cada noche vacía."
+  </blockquote>
+</div>
+
+<!-- Parte 6: Conclusiones-->
+<section id="conclusiones">
+  <div class="section-tag reveal">06 - Conclusiones</div>
+  <h2 class="section-title reveal">Qué nos enseñan los datos</h2>
+  <p class="section-lead reveal">La visualización de 119 390 reservas revela patrones accionables para la gestión hotelera. Estos son los cinco hallazgos más importantes de nuestra historia.</p>
+
+  <ul class="finding-list reveal">
+    <li>
+      <span class="fi">📍</span>
+      <div class="ft"><strong>La dependencia de intermediarios online es crítica</strong> El 47,3 % de reservas llegan por agencias online. Esto incrementa costes de comisión y reduce el control sobre la relación con el cliente.</div>
+    </li>
+    <li>
+      <span class="fi">🚨</span>
+      <div class="ft"><strong>La crisis de cancelaciones cuesta millones</strong> Con un ADR de ~€102 y 43 773 cancelaciones, el coste estimado de noches perdidas supera los 4,5 millones de euros anuales, sin contar rebooking no ejecutado.</div>
+    </li>
+    <li>
+      <span class="fi">🌍</span>
+      <div class="ft"><strong>El mercado doméstico es a la vez el mayor y el más volátil</strong> Portugal genera más reservas que ningún otro país, pero su tasa de cancelación (~55 %) triplica la de mercados como Reino Unido o Irlanda.</div>
+    </li>
+    <li>
+      <span class="fi">📅</span>
+      <div class="ft"><strong>La antelación es un predictor de cancelación</strong> Reservar con mucha anticipación correlaciona fuertemente con cancelación. Los sistemas de CRM pueden usar este dato para aplicar políticas diferenciadas de depósito.</div>
+    </li>
+    <li>
+      <span class="fi">🏖️ vs 🏙️</span>
+      <div class="ft"><strong>Dos perfiles de cliente muy distintos</strong> El resort atrae a familias británicas e irlandesas (paquetes de sol/playa, mayor duración, menos cancelaciones). El hotel urbano atrae a viajeros europeos de negocios y culturales, con mayor rotación y más cancelaciones.</div>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  <p>Javier Martín Acevedo</p>
+  <p style="margin-top:.5rem;">Análisis visual y narrativa realizados con R (ggplot2, tidyverse) y HTML/Chart.js - PEC 3 - Narrativa de Datos con Visualización - UOC</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
